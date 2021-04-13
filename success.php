@@ -13,6 +13,14 @@
         $specialty = $_POST['specialty'];
         $isSuccess = $crud->insertAttendees($fname, $lname, $dob, $email, $contact, $specialty);
 
+        //$orig_file = $_FILES["avatar"]["tmp_name"];
+        //$ext = pathinfo($_FILES["avatar"]["tmp_name"], PATHINFO_EXTENSION);
+        //$target_dir = 'uploads/';
+        //$destination = "$target_dir$contact.$ext";
+        //move_uploaded_file($orig_file, $destination);
+        
+        //exit();
+
         if ($isSuccess){
             include 'includes/successmessage.php';
         }
@@ -42,7 +50,7 @@
             
         </div>
     </div> -->
-
+    <div class="container-md">
     <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">
