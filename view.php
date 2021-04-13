@@ -1,6 +1,7 @@
 <?php 
     $title = 'View Record';
     require_once 'includes/header.php';
+    //require_once 'includes/auth_check.php';
     require_once 'db/conn.php';
     if (!isset($_GET['id'])){
         include 'includes/errormessage.php';
@@ -10,7 +11,7 @@
         $result = $crud->getAttendeeDetails($id);
     
 ?> 
-
+<div class="container-md">
 <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">
@@ -30,11 +31,14 @@
             
        </div>
 </div>
+</div>
 <br/>
+<div class = "container-md">
         <a href="viewrecords.php?" class="btn btn-info">Back to list</a>
         <a href="edit.php?id=<?php echo $result['attendee_id'] ?>" class="btn btn-warning">Edit</a>
         <a onclick="return confirm('Are you sure?');" href="delete.php?id=<?php echo $result['attendee_id'] ?>" class="btn btn-danger">Delete</a>
     <?php } ?>
+</div>
 <br>
 <br>
 <br>

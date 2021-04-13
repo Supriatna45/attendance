@@ -1,11 +1,12 @@
 <?php 
     $title = 'View Records';
     require_once 'includes/header.php';
+    //require_once 'login.php';
     require_once 'db/conn.php';
     $results = $crud->getAttendees();
 ?> 
 
-    <table class="table">
+    <table class="table container-md">
         <tr>
             <th>#</th>
             <th>Frist Name</th>
